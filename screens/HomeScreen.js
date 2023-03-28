@@ -4,7 +4,7 @@ import { useNavigation } from '@react-navigation/native'
 import { locations } from '../data.js'
 import Location from '../components/Location'
 
-export default function LocationsScreen() {
+export default function HomeScreen() {
   const navigation = useNavigation()
 
   useLayoutEffect(() => {

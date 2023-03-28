@@ -1,6 +1,7 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import LocationsScreen from './screens/LocationsScreen';
+import HomeScreen from './screens/HomeScreen';
+import LocationScreen from './screens/LocationScreen';
 import { TailwindProvider } from 'tailwindcss-react-native';
 
 
@@ -11,8 +12,8 @@ export default function App() {
     <NavigationContainer>
       <TailwindProvider>
         <Stack.Navigator>
-          {/* <Stack.Screen name="Home" component={HomeScreen} /> */}
-          <Stack.Screen name="Location" component={LocationsScreen} />
+          <Stack.Screen name="Home" component={HomeScreen} />
+          <Stack.Screen name="Location" component={LocationScreen} />
         </Stack.Navigator>
       </TailwindProvider>
     </NavigationContainer>
