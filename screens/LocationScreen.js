@@ -12,7 +12,10 @@ export default function LocationScreen() {
     params: {
       name,
       country,
-      img
+      img,
+      startDate,
+      endDate,
+      summary
     }
   } = useRoute()
 
@@ -33,15 +36,17 @@ export default function LocationScreen() {
         />
         <TouchableOpacity
           onPress={navigation.goBack}
-          className="absolute top-14 left-5 p-2 bg-gray-100 rounded-full"
+          className="absolute top-10 left-5 p-2 bg-gray-100 rounded-full"
         >
           <ArrowLeftIcon size={20} color="black" />
         </TouchableOpacity>
       </View>
 
-      <View className="items-center space-y-1">
-        <Text className="font-bold text-lg pt-6">{name}</Text>
-        <Text className="font-bold text-lg pt-6">{country}</Text>
+      <View className="pl-3">
+        <Text className="font-bold text-3xl pt-6">{name}</Text>
+        <Text className="font-bold text-lg">{country}</Text>
+        <Text className="text-sm">{startDate} - {endDate}</Text>
+        <Text className="pt-4 text-sm">{summary}</Text>
       </View>
     </ScrollView>
   )

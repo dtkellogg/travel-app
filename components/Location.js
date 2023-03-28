@@ -3,7 +3,7 @@ import React from 'react'
 import { useNavigation } from '@react-navigation/native'
 
 
-export default function Location({ name, country, img }) {
+export default function Location({ name, country, img, startDate, endDate, summary }) {
   const navigation = useNavigation()
 
   return (
@@ -13,7 +13,10 @@ export default function Location({ name, country, img }) {
         navigation.navigate('Location', {
           name,
           country,
-          img
+          img,
+          startDate,
+          endDate,
+          summary
         })
       }}
     >
