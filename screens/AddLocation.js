@@ -1,23 +1,11 @@
 import { View, Text, ScrollView, Image, TouchableOpacity } from 'react-native'
-import React, { useLayoutEffect } from 'react'
-import { useNavigation, useRoute } from '@react-navigation/native'
-import {
-  ArrowLeftIcon
-} from 'react-native-heroicons/solid'
+import React from 'react'
+import { useNavigation } from '@react-navigation/native'
+import React from 'react'
+import { ArrowLeftIcon } from 'react-native-heroicons/solid'
 
-export default function LocationScreen() {
+export default function AddLocation() {
   const navigation = useNavigation()
-
-  const {
-    params: {
-      name,
-      country,
-      img,
-      startDate,
-      endDate,
-      summary
-    }
-  } = useRoute()
 
   useLayoutEffect(() => {
     navigation.setOptions({
@@ -27,6 +15,8 @@ export default function LocationScreen() {
 
   return (
     <ScrollView>
+      <Text>Add Location</Text>
+      {/* Back btn */}
       <View className="relative">
         <Image
           source={{
@@ -42,12 +32,7 @@ export default function LocationScreen() {
         </TouchableOpacity>
       </View>
 
-      <View className="pl-3">
-        <Text className="font-bold text-3xl pt-6">{name}</Text>
-        <Text className="font-bold text-lg">{country}</Text>
-        <Text className="text-sm">{startDate} - {endDate}</Text>
-        <Text className="pt-4 text-sm">{summary}</Text>
-      </View>
+
     </ScrollView>
   )
 }
