@@ -48,7 +48,7 @@ export default function AddLocationScreen() {
         style={styles.input}
         placeholder="Country"
         value={country}
-        onChangeText={country => changeName(country)}
+        onChangeText={country => changeCountry(country)}
       />
       <Text className="ml-4">Country: {country}</Text>
       <TextInput
@@ -84,7 +84,7 @@ export default function AddLocationScreen() {
         onPress={onSubmit}
         title="Submit"
         className="bg-orange text-orange-500"
-        accessibilityLabel="Learn more about this purple button"
+        accessibilityLabel="Create new Location"
       />
 
     </ScrollView>
